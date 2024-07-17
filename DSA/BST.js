@@ -102,7 +102,7 @@ class BST {
     bfs() {
         const queue = [];
         const result = [];
-        queue.push(this.root);
+        if (this.root) queue.push(this.root);
 
         while (queue.length > 0) {
             const currentNode = queue.shift();
@@ -118,8 +118,11 @@ class BST {
     }
 
     // Min value
-    min() {
-        let currentNode = this.root;
+    min(currentNode) {
+        if (currentNode === null) {
+            return null;
+        }
+        // let currentNode = this.root;
         while (currentNode.left) {
             currentNode = currentNode.left;
         }
@@ -127,12 +130,45 @@ class BST {
     }
 
     // Max value
-    max() {
-        let currentNode = this.root;
+    max(currentNode) {
+        if (currentNode === null) {
+            return null;
+        }
+        // let currentNode = this.root;
         while (currentNode.right) {
             currentNode = currentNode.right;
         }
         return currentNode.value;
+    }
+
+    // Remove a node
+    remove(value) {
+        this.root = this.deleteNode(this.root, value);
+    }
+
+    deleteNode(root, value) {
+        if (root === null) {
+            return null;
+        }
+
+        if (value < root.value) {
+            root.left = this.deleteNode(root.left, value);
+
+        } else if (value > root.value) {
+            root.right = this.deleteNode(root.right, value);
+
+        } else {
+            if (!root.left && !root.right) {
+                return null
+            } else if (!root.left) {
+                return root.right;
+            } else if (!root.right) {
+                return root.left;
+            }
+            root.value = this.min(root.right);
+            root.right = this.deleteNode(root.right, root.value);
+        }
+        return root;
     }
 }
 
@@ -152,7 +188,9 @@ bst.insert(5);
 // bst.inorder();
 // bst.postorder();
 bst.bfs();
-console.log(bst.min());
-console.log(bst.max());
+bst.remove(5)
+bst.bfs();
+console.log(bst.min(bst.root));
+console.log(bst.max(bst.root));
 
 console.log(bst);
