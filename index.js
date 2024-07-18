@@ -85,7 +85,7 @@ map.set(0, false)
 // console.log(map.size);
 // console.log(map.has(0));
 // console.log(map.get(0));
-map.clear()
+// map.clear()
 
 // for (x of map) {
 //     console.log(x[0]);
@@ -99,8 +99,64 @@ const data = new Set(["name", "age", "isMale", "name"]);
 
 // console.log(data);
 
-let s = ''
-for (i = 0; i < 5; i++) {
-    s += '*'
-    console.log(s);
+// let s = ''
+// for (i = 0; i < 5; i++) {
+//     s += '*'
+//     console.log(s);
+// }
+
+let reverse = function (arr) {
+    let start = 0, end = arr.length - 1;
+
+    while (start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp
+
+        start++;
+        end--
+    }
+
+    return arr;
 }
+
+// var addTwoNumbers = function (l1, l2) {
+
+//     // let num1 = Number(reverse(l1).join(''));
+//     // let num2 = Number(reverse(l2).join(''));
+
+//     let newl1 = reverse(l1)
+//     let newl2 = reverse(l2)
+
+//     let revl1 = '', revl2 = '';
+//     for (let i = 0; i < l1.length; i++) {
+//         revl1 = revl1 + String(l1[i])
+//     }
+//     for (let i = 0; i < l2.length; i++) {
+//         revl2 = revl2 + String(l2[i])
+//     }
+
+//     let num1 = Number(revl1)
+//     let num2 = Number(revl2)
+
+//     let sum = num1 + num2;
+//     // let result = String(sum).split('').map(Number);
+//     let result = []
+//     for (let i = 0; i < String(sum).length; i++) {
+//         result[i] = String(sum)[i]
+//     }
+
+//     result = reverse(result);
+//     let newResult = []
+//     for (i = 0; i < result.length; i++) {
+//         newResult[i] = Number(result[i])
+//     }
+
+//     return newResult;
+
+// };
+
+// let l1 = [2, 4, 3];
+// let l2 = [5, 6, 4];
+
+// console.log(addTwoNumbers(l1, l2));
