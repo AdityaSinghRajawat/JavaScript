@@ -165,3 +165,12 @@ let reverse = function (arr) {
 //param A : array of integers
 //return an integer
 
+let str = ''
+let space = ' '
+let n = 5
+for (let i = 1; i <= n; i++) {
+    str = str + '*'
+    space = space
+    console.log(space + str);
+}
+
