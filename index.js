@@ -165,12 +165,81 @@ let reverse = function (arr) {
 //param A : array of integers
 //return an integer
 
-let str = ''
-let space = ' '
-let n = 5
-for (let i = 1; i <= n; i++) {
-    str = str + '*'
-    space = space
-    console.log(space + str);
+// let str = ''
+// let space = ' '
+// let n = 5
+// for (let i = 1; i <= n; i++) {
+//     str = str + '*'
+//     space = space
+//     console.log(space + str);
+// }
+
+
+// function hole(arr, H) {
+//     let count = 0;
+
+//     for (let i = 1; i < arr.length; i++) {
+//         let holesRequired = arr[i];
+
+//         if (holesRequired <= H) {
+//             if (holesRequired % 2 === 0 && H % 2 === 0) {
+//                 // If both the holesRequired and H are even, reduce holesRequired by 1 due to the glitch
+//                 holesRequired -= 1;
+//             }
+
+//             if (holesRequired <= H) {
+//                 H -= holesRequired;
+//                 count++;
+//             }
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(hole([5, 2, 5, 6, 1, 7], 13)); // Output: 4
+
+// let n = 5;
+// let result = '';
+
+
+// for (let rows = 0; rows < n; rows++) {
+//     for (let columns = 0; columns < n - rows; columns++) {
+//         process.stdout.write('*')
+//     }
+//     console.log();
+// }
+
+// for (let rows = 0; rows < n; rows++) {
+//     for (let columns = 0; columns < n - rows; columns++) {
+//         result = result + '*'
+//     }
+//     result = result + '\n'
+// }
+
+// console.log(result);
+
+
+
+let n = 5;
+let result = ''
+
+// for (let row = 1; row <= n; row++) {
+//     for (let column = 1; column <= row; column++) {
+//         result += column
+//     }
+//     result += '\n'
+// }
+
+for (let row = 1; row <= 2 * n - 1; row++) {
+
+    let col = row <= n ? row : 2 * n - row;
+
+    for (let column = 1; column <= col; column++) {
+        result += '*'
+    }
+    result += '\n'
 }
+
+console.log(result);
 
