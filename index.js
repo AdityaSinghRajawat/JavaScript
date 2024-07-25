@@ -231,12 +231,42 @@ let result = ''
 //     result += '\n'
 // }
 
-for (let row = 1; row <= 2 * n - 1; row++) {
+// for (let row = 1; row <= 2 * n - 1; row++) {
 
-    let col = row <= n ? row : 2 * n - row;
+//     let col = row <= n ? row : 2 * n - row;
 
-    for (let column = 1; column <= col; column++) {
-        result += '*'
+//     for (let column = 1; column <= col; column++) {
+//         result += '*'
+//     }
+//     result += '\n'
+// }
+
+// for (let row = 1; row <= 2 * n - 1; row++) {
+
+//     let totalColsInRow = row <= n ? row : 2 * n - row;
+//     let noOfSpace = n - totalColsInRow;
+
+//     for (let space = 1; space <= noOfSpace; space++) {
+//         result += ' '
+//     }
+
+//     for (let column = 1; column <= totalColsInRow; column++) {
+//         result += '* '
+//     }
+//     result += '\n'
+// }
+
+
+for (let row = 1; row <= n; row++) {
+
+    let noOfSpace = n - row;
+
+    for (let space = 1; space <= noOfSpace; space++) {
+        result += ' '
+    }
+
+    for (let column = 1; column <= row; column + 2) {
+        result +=  '* '
     }
     result += '\n'
 }

@@ -19,3 +19,4 @@ majorityElement = function (A) {
 }
 
 console.log(majorityElement([2, 1, 2, 1, 1, 2, 2, 1, 1]));
+console.log(majorityElement('aaasdddadd'));
