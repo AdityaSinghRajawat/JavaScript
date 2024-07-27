@@ -257,19 +257,73 @@ let result = ''
 // }
 
 
-for (let row = 1; row <= n; row++) {
+// for (let row = 1; row <= n; row++) {
 
-    let noOfSpace = n - row;
+//     let noOfSpace = n - row;
 
-    for (let space = 1; space <= noOfSpace; space++) {
-        result += ' '
-    }
+//     for (let space = 1; space <= noOfSpace; space++) {
+//         result += ' '
+//     }
 
-    for (let column = 1; column <= row; column + 2) {
-        result +=  '* '
-    }
-    result += '\n'
-}
+//     for (let column = 1; column <= row; column + 2) {
+//         result +=  '* '
+//     }
+//     result += '\n'
+// }
 
-console.log(result);
+// console.log(result);
 
+
+// let str = 'Hello I am Aditya Singh Rajawat'
+
+// let newStr = str.split(' ').map((ele) => (
+//     ele.split('').reverse().join('')
+// ));
+
+// console.log(newStr);
+
+// var searchRange = function (nums, target) {
+
+//     let result = [];
+
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === target) {
+//             result.push(i);
+//         }
+//         if (result.length > 2) {
+//             result.splice(1, 1)
+//         }
+//     }
+
+//     if (result.length === 1) {
+//         result.push(result[0]);
+//     }
+
+//     if (result.length !== 0) {
+//         return result;
+//     } else {
+//         return [-1, -1];
+//     }
+
+// };
+
+// let nums = [1, 1, 1];
+// let target = 1;
+// console.log(searchRange(nums, target)); // [3, 4]
+
+// console.log('5' === 5);
+
+let board = [
+    ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+    ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+    [".", "9", "8", ".", ".", ".", ".", "6", "."],
+    ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+    ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+    ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+    [".", "6", ".", ".", ".", ".", "2", "8", "."],
+    [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+    [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+]
+
+console.log(board.length);
