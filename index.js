@@ -293,9 +293,15 @@ let result = ''
 
 // console.log(1342 / 10 % 10);
 
-let arr = [10, 30, 23, 34, 54, 65];
+// let arr = [10, 30, 23, 34, 54, 65];
 
-for (let i in arr) {
-    console.log(i);
-}
+// for (let i in arr) {
+//     console.log(i);
+// }
+
+
+// console.log(036 / 1);
+
+console.log(Number((" ")));
+
 
