@@ -305,22 +305,44 @@ let result = ''
 // console.log(Number((" ")));
 
 
-function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
-}
+// function ListNode(val, next) {
+//     this.val = (val === undefined ? 0 : val);
+//     this.next = (next === undefined ? null : next);
+// }
 
-let head = new ListNode(1);
-head.next = new ListNode(2);
-head.next.next = new ListNode(3);
-head.next.next.next = new ListNode(4);
+// let head = new ListNode(1);
+// head.next = new ListNode(2);
+// head.next.next = new ListNode(3);
+// head.next.next.next = new ListNode(4);
 
-console.log(head);
+// console.log(head);
 
-let dummy = head;
-console.log(dummy);
+// let dummy = head;
+// console.log(dummy);
 
-dummy.next = new ListNode(5);
-console.log(dummy);
-console.log(head);
+// dummy.next = new ListNode(5);
+// console.log(dummy);
+// console.log(head);
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let k = 3;
+// let res = [];
+// let left = 0;
+// let right = arr.length - 1;
+// while (left <= right) {
+//     if (left === right) {
+//         res.push(arr[left]);
+//         break;
+
+//     } else {
+//         res.push(arr[left]);
+//         res.push(arr[right]);
+//     }
+//     left++;
+//     right--;
+// }
+// console.log(res);
+
+
+
 
