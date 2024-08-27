@@ -30,3 +30,5 @@ console.log('--------------------------------------');
 console.log(longestSubstringKUniqueChars('aabacbebebe', 2)); // 6
 console.log('--------------------------------------');
 console.log(longestSubstringKUniqueChars('aabacbebebe', 1)); // 2
+console.log('--------------------------------------');
+console.log(longestSubstringKUniqueChars('aabacbebebe', 4)); // 11
