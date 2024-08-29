@@ -21,22 +21,23 @@ let minimumWindowSubstring = (string, pattern) => {
             j++;
         } else if (count === 0) {
 
-            minLen = Math.min(minLen, j - i + 1);
-
             while (count === 0) {
+
+                if (j - i + 1 < minLen) {
+                    minLen = j - i + 1;
+                    minStart = i;
+                }
+
                 if (map[string[i]] !== undefined) {
                     if (map[string[i]] === 0) count++;
                     map[string[i]]++;
-                    minLen = Math.min(minLen, j - i + 1);
-                    minStart = i;
                 }
                 i++;
             }
             j++;
         }
     }
-    console.log(string.slice(minStart, minStart + minLen));
-    return minLen === Infinity ? '' : minLen;
+    return minLen === Infinity ? '' : string.slice(minStart, minStart + minLen);
 }
 
 console.log(minimumWindowSubstring('ADOBECODEBANC', 'ABC')); // 4
