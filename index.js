@@ -324,7 +324,7 @@ let result = ''
 // console.log(dummy);
 // console.log(head);
 
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let arr = [1, 2, 3, 4, 8, 5, 6, 7, 8, 9];
 // let k = 3;
 // let res = [];
 // let left = 0;
@@ -343,6 +343,17 @@ let result = ''
 // }
 // console.log(res);
 
+// console.log("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT".substring(0, 9));
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+// let no = arr.slice(0)
+// console.log(no);
+// no[2] = 5
+// console.log(no);
+// console.log(arr);
+
+let m = 10 >> 5;
+console.log(m);
 
 
 
