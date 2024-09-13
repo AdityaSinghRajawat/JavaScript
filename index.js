@@ -355,5 +355,8 @@ let arr = [1, 2, 3, 4, 8, 5, 6, 7, 8, 9];
 // let m = 10 >> 5;
 // console.log(m);
 
+console.log(10 > 5);
+
+
 
 
